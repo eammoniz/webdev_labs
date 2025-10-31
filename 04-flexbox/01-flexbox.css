@@ -3,27 +3,104 @@
 }
 
 /* Flex Container 1 */
-
 .flex-container-1 {
   display: flex;
+  width: 1000px;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 /* Flex Container 2 */
+.flex-container-2 {
+  display: flex;
+  width: 1000px;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: right;
+}
 
 /* Flex Container 3 */
 /* use height: 400px; on the container */
+.flex-container-3 {
+  display: flex;
+  width: 1000px;
+  height: 400px;
+  justify-content: flex-end;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+}
 
 /* Flex Container 4 */
+.flex-container-4 {
+  display: flex;
+  width: 1000px;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+}
 
 /* Flex Container 5 */
+  /*
+  <div class="flex-item item1">1</div>
+  <div class="flex-item item2">2</div>
+  <div class="flex-item item3">3</div>
+  <div class="flex-item item4">4</div>
+  <div class="flex-item item5">5</div>
+  <div class="flex-item item6">6</div>
+  <div class="flex-item item7">7</div>
+  <div class="flex-item item8">8</div>
+  
+li[class]
+.dog {
+  color: var(--violet);
+}
+#cat {
+  color: var(--teal);
+}
+.parrot {
+  color: var(--green);
+}
+  */
+.flex-container-5 {
+  display: flex;
+  width: 800px;
+  div[class="flex-item item1"] {
+    height: 200px;
+  }
+  div[class="flex-item item2"] {
+    height: 300px;
+  }
+  div[class="flex-item item3"] {
+    height: 200px;
+  }
+  div[class="flex-item item4"] {
+    height: 100px;
+  }
+  div[class="flex-item item5"] {
+    height: 100px;
+  }
+  div[class="flex-item item6"] {
+    height: 200px;
+  }
+  div[class="flex-item item7"] {
+    height: 100px;
+  }
+  div[class="flex-item item8"] {
+    height: 300px;
+  }  
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
 
 /* Flex Container 6 */
-
-.flex-container-6 .flex-item {
-  width: 400px;
+.flex-container-6 {
+  display: flex;
+  height: 300px;
+  width: 800px;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 /* use height: 300px; on the container */
