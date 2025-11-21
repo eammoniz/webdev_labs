@@ -54,6 +54,25 @@ $(document).ready(function () {
 	$element.append($title, $author, $published, $pages);
 	$app.append($element);
 	};
+
+	$.ajax({
+		url: url,
+		method: 'GET',
+		dataType: 'json',
+		success: function(data) {
+			data.forEach((item) => {
+				addBookToDOM(item);
+			});
+		},	
+		error: function() {
+			$app.append($li);
+		},
+
+		complete: function() {
+			$loading.remove();
+		}
+	});
+});
 	
 /* original fetch code 
 const fetchData = (url) => {
@@ -76,23 +95,4 @@ const fetchData = (url) => {
 };
 fetchData(url);
 */
-
-	$.ajax({
-		url: url,
-		method: 'GET',
-		dataType: 'json',
-		success: function(data) {
-			data.forEach((item) => {
-				addBookToDOM(item);
-			});
-		},	
-		error: function() {
-			$app.append($li);
-		},
-
-		complete: function() {
-			$loading.remove();
-		}
-	});
-});
 
